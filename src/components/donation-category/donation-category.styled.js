@@ -20,6 +20,12 @@ const CardContainer = styled.div`
 `;
 
 const Card = styled(Button)`
+    && {
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
     @media (max-width: ${breakpoints.values.desktop}px) {
         flex-direction: column;
     }
