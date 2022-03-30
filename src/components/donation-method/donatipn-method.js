@@ -5,7 +5,6 @@ import {
     Title,
 } from './donation-method.styled';
 import { CardMethod } from '../card-method';
-import { CardData } from '../card-data';
 
 const DonationMethod = () => {
     return (
@@ -18,7 +17,6 @@ const DonationMethod = () => {
 
                 <CardWrapper>
                     <CardMethod />
-                    <CardData />
                 </CardWrapper>
             </Wrapper>
         </DonationContainer>

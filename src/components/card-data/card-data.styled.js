@@ -1,11 +1,17 @@
 import styled from 'styled-components';
 import palette from '../../theme/palette';
 import { BaseInput } from '../common/base-input';
+import breakpoints from '../../theme/breakpoints';
 
 const CardContainer = styled.div`
-    width: 30%;
+    width: 35%;
     background-color: ${palette.grey[100]};
     border-radius: 20px;
+
+    @media (max-width: ${breakpoints.values.desktop}px) {
+        margin: 15px auto 0;
+        width: 50%;
+    }
 `;
 
 const CardWrapper = styled.div`

@@ -7,16 +7,22 @@ import MastercardSVGComponent from '../../assets/image/MastercardSVGComponent';
 import WebMoneySVGComponent from '../../assets/image/WebMoneySVGComponent';
 import PaypalSVGComponent from '../../assets/image/PaypalSVGComponent';
 import PrivatSVGComponent from '../../assets/image/PrivatSVGComponent';
+import breakpoints from '../../theme/breakpoints';
 
 const Wrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+
+    @media (max-width: ${breakpoints.values.desktop}px) {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
 `;
 
 const Card = styled(Button)`
     && {
-        width: 180px;
+        width: 100%;
         height: 100px;
         display: flex;
         flex-direction: column;
@@ -41,9 +47,12 @@ const Title = styled.span`
 
 const MasterIcon = styled(MastercardSVGComponent)`
     && {
-        width: 50px;
         height: 50px;
         fill: ${palette.white[100]};
+
+        @media (max-width: 425px) {
+            display: none;
+        }
     }
 `;
 
@@ -51,6 +60,10 @@ const VisaICon = styled(VisaSVGComponent)`
     width: 50px;
     height: 50px;
     margin-left: 25px;
+
+    @media (max-width: 425px) {
+        margin-left: 0;
+    }
 `;
 
 const PrivatIcon = styled(PrivatSVGComponent)`

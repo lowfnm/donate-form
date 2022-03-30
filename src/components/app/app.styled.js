@@ -25,6 +25,7 @@ const SubmitButton = styled(Button)`
         background: linear-gradient(90deg, #e53656, #9863a2 85%);
         box-shadow: 0 0 15px #e53656;
         transition: 5s linear box-shadow;
+        margin-bottom: 10px;
 
         &:hover {
             box-shadow: none;
