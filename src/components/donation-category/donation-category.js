@@ -10,6 +10,9 @@ import {
     HeartIcon,
 } from './donation-category.styled';
 import { DonationMethod } from '../donation-method';
+import { DonationContainer } from '../donation-method/donation-method.styled';
+import { height } from '@mui/system';
+import { Spinner } from '../common/spinner';
 
 const DonationCategory = () => {
     const [item, setItem] = useState('wallet');
@@ -56,7 +59,13 @@ const DonationCategory = () => {
                 </Card>
             </CardContainer>
 
-            {item === 'wallet' ? <DonationMethod /> : ''}
+            {item === 'wallet' ? (
+                <DonationMethod />
+            ) : (
+                <DonationContainer style={{ height: '286px' }}>
+                    <Spinner />
+                </DonationContainer>
+            )}
         </>
     );
 };

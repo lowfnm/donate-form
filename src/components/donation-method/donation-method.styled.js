@@ -3,6 +3,7 @@ import palette from '../../theme/palette';
 import breakpoints from '../../theme/breakpoints';
 
 const DonationContainer = styled.div`
+    position: relative;
     margin-bottom: 25px;
     width: 100%;
     border-radius: 20px;
@@ -28,8 +29,8 @@ const Title = styled.h3`
     color: ${palette.grey[100]};
 
     @media (max-width: ${breakpoints.values.desktop}px) {
-        // top right bottom left
         margin: 0 auto 15px;
+
         &:last-child {
             display: none;
         }

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import palette from '../../theme/palette';
-import { BaseInput } from '../common/base-input';
-import breakpoints from '../../theme/breakpoints';
+import palette from '../../../theme/palette';
+import breakpoints from '../../../theme/breakpoints';
+import MoneyInput from './money-input';
 
 const CardContainer = styled.div`
+    position: relative;
     width: 35%;
     background-color: ${palette.grey[100]};
     border-radius: 20px;
@@ -11,6 +12,15 @@ const CardContainer = styled.div`
     @media (max-width: ${breakpoints.values.desktop}px) {
         margin: 15px auto 0;
         width: 50%;
+        height: 200px;
+    }
+
+    @media (max-width: 600px) {
+        width: 75%;
+    }
+
+    @media (max-width: 420px) {
+        width: 100%;
     }
 `;
 
@@ -25,13 +35,11 @@ const CardTitle = styled.h4`
 
 const InputWrapper = styled.div`
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
 `;
 
-const CardInput = styled(BaseInput)`
+const CardInput = styled(MoneyInput)`
     && {
-        width: 61px;
-        text-align: center;
         border-radius: 5px;
         background-color: white;
     }

@@ -1,15 +1,15 @@
 import styled from 'styled-components';
-import palette from '../../theme/palette';
+import palette from '../../../theme/palette';
 import { Button } from '@mui/material';
-import AtmSVGComponent from '../../assets/image/AtmSVGComponent';
-import VisaSVGComponent from '../../assets/image/VisaSVGComponent';
-import MastercardSVGComponent from '../../assets/image/MastercardSVGComponent';
-import WebMoneySVGComponent from '../../assets/image/WebMoneySVGComponent';
-import PaypalSVGComponent from '../../assets/image/PaypalSVGComponent';
-import PrivatSVGComponent from '../../assets/image/PrivatSVGComponent';
-import breakpoints from '../../theme/breakpoints';
+import AtmSVGComponent from '../../../assets/image/AtmSVGComponent';
+import VisaSVGComponent from '../../../assets/image/VisaSVGComponent';
+import MastercardSVGComponent from '../../../assets/image/MastercardSVGComponent';
+import WebMoneySVGComponent from '../../../assets/image/WebMoneySVGComponent';
+import PaypalSVGComponent from '../../../assets/image/PaypalSVGComponent';
+import PrivatSVGComponent from '../../../assets/image/PrivatSVGComponent';
+import breakpoints from '../../../theme/breakpoints';
 
-const Wrapper = styled.div`
+const CardWrapper = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -40,7 +40,7 @@ const Card = styled(Button)`
     }
 `;
 
-const Title = styled.span`
+const CardTitle = styled.span`
     font-size: 10px;
     color: ${palette.white[100]};
 `;
@@ -87,7 +87,7 @@ const PayPalIcon = styled(PaypalSVGComponent)`
 `;
 
 export {
-    Wrapper,
+    CardWrapper,
     Card,
     AtmIcon,
     VisaICon,
@@ -95,5 +95,5 @@ export {
     PrivatIcon,
     WebMoneyIcon,
     PayPalIcon,
-    Title,
+    CardTitle,
 };

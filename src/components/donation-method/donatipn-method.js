@@ -4,7 +4,7 @@ import {
     CardWrapper,
     Title,
 } from './donation-method.styled';
-import { CardMethod } from '../card-method';
+import { CardMethod } from './card-method';
 
 const DonationMethod = () => {
     return (
