@@ -9,7 +9,6 @@ const BaseInput = styled(TextField)(({ theme }) => {
         '& .MuiInput-input': {
             fontFamily: 'inherit',
             fontSize: '18px',
-            lineHeight: '22.94px',
         },
     };
 });
